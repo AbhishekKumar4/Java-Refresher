@@ -2,6 +2,7 @@
 
 # Collections
 - [List implementation in Java](https://github.com/AbhishekKumar4/Java-Refresher/blob/master/collections/SampleListDemo.java)
+- [Iterate over TreeMap](https://github.com/AbhishekKumar4/Java-Refresher/blob/master/collections/IterateOverTreeMap.java)
 
 # 1. POST vs PUT vs PATCH
 
