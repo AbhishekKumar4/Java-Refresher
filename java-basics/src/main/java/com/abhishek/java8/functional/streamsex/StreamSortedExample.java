@@ -2,6 +2,7 @@ package com.abhishek.java8.functional.streamsex;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class StreamSortedExample {
@@ -27,12 +28,33 @@ public class StreamSortedExample {
         aList.stream()
                 .sorted((p1, p2)->p1.x.compareTo(p2.x))
                 .forEach(System.out::println);
+
+
+        aList.stream()
+                .sorted(Comparator.comparingInt(Point::getX))
+                .forEach(System.out::println);
     }
 }
 
 
 class Point
 {
+    public Integer getX() {
+        return x;
+    }
+
+    public void setX(Integer x) {
+        this.x = x;
+    }
+
+    public Integer getY() {
+        return y;
+    }
+
+    public void setY(Integer y) {
+        this.y = y;
+    }
+
     Integer x, y;
     Point(Integer x, Integer y) {
         this.x = x;
