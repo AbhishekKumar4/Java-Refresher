@@ -5,11 +5,10 @@ import java.util.concurrent.Executors;
 
 public class NewFixedThreadPool_1 {
 
-
     public static void main(String args[]) {
         ExecutorService es = Executors.newFixedThreadPool(2);
 
-        for (int i = 1; i <= 6; i++) {
+        for (int i = 1; i <= 2; i++) {
             LoopTask loopTask=new LoopTask("LoopTask "+i);
             es.submit(loopTask);
         }

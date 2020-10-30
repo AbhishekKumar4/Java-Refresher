@@ -2,6 +2,7 @@ package com.abhishek.multithreading.synclocks;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class SyncLocks_1 {
 
@@ -16,7 +17,7 @@ public class SyncLocks_1 {
             executor.submit(rr);
         }
         executor.shutdown();
-        System.out.println(cc.count);
+        System.out.println(cc.count.intValue());
     }
 }
 
@@ -32,8 +33,9 @@ class Runner implements Runnable {
 }
 
 class Counter {
-    int count;
+    AtomicInteger count = new AtomicInteger(0);
     public synchronized void incrementCount() {
-        this.count = count+1;
+        System.out.println(count.intValue());
+        count.getAndIncrement();
     }
 }
