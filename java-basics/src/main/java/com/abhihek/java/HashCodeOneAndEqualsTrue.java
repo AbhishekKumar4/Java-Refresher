@@ -2,7 +2,6 @@ package com.abhihek.java;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class HashCodeOneAndEqualsTrue {
 
