@@ -12,6 +12,7 @@ public class NewCachedThreadPool_2 {
             FetchDataFromFile fdff = new FetchDataFromFile("File :" + i);
             System.out.println("A new file has been added to read : " + fdff.getFileName());
             threadPoolExecutor.execute(fdff);
+
         }
         threadPoolExecutor.shutdown();
     }
